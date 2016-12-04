@@ -9,15 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    var colorList = [UIColor.red,UIColor.green,UIColor.yellow,UIColor.blue]
     @IBOutlet weak var lightBulb: UIImageView!
+    @IBAction func btnColorSegmenter(_ sender: UISegmentedControl) {
+        lightBulb.backgroundColor = colorList[sender.selectedSegmentIndex]
+    }
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        lightBulb.backgroundColor = UIColor.blue
+        lightBulb.backgroundColor = UIColor.red
         
     }
     
